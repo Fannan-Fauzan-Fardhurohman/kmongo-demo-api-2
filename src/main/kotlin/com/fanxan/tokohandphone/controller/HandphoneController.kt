@@ -44,16 +44,16 @@ class HandphoneController {
     }
 
     @PutMapping("/{id}")
-    fun updateKost(
+    fun updateHp(
         @PathVariable id: String,
-        @RequestBody kost: DataModel
+        @RequestBody Hp: DataModel
     ): BaseResponse<DataModel> {
-        return BaseResponse(true, "update data Hp", handphoneServices.updateHandphone(id, kost))
+        return BaseResponse(true, "update data Hp", handphoneServices.updateHandphone(id, Hp))
     }
     @DeleteMapping("/{id}")
-    fun deleteKost(
+    fun deleteHp(
         @PathVariable(value = "id") id: String
     ): BaseResponse<DataModel> {
-        return BaseResponse(true, "delete data kost", handphoneServices.deleteHandphone(id))
+        return BaseResponse(true, "delete data Hp", handphoneServices.deleteHandphone(id))
     }
 }

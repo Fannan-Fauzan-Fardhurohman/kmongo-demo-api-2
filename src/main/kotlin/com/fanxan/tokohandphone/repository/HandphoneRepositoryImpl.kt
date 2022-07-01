@@ -58,6 +58,5 @@ class HandphoneRepositoryImpl : HandphoneRepository {
         } else {
             throw IllegalStateException("update gagal")
         }
-
     }
 }
